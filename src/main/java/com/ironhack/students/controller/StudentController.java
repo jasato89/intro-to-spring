@@ -24,4 +24,15 @@ public class StudentController {
         return studentService.getStudentsStartingWithA();
     }
 
+    @GetMapping("/student-maya")
+     public Student findStudentNamedMaya() {
+        String name = "Jaume";
+        return studentService.findStudentByName(name);
+    }
+
+    @GetMapping("/estudiantes-aprobados")
+    public List<Student> encontrarEstudiantesAprobados() {
+        return studentService.findStudentsWhoPassed();
+    }
+
 }

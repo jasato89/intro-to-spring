@@ -28,4 +28,14 @@ public class StudentService {
         }
         return studentsWithA;
     }
+
+    public Student findStudentByName(String name) {
+        return studentRepository.findStudentByFirstName(name);
+
+    }
+
+    public List<Student> findStudentsWhoPassed() {
+        return studentRepository.findStudentsByGradeBetween(5, 10);
+
+    }
 }

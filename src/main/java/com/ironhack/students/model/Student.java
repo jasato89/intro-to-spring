@@ -17,6 +17,19 @@ public class Student {
     @Column(name = "first_name")
     private String firstName;
     private String lastName;
+    private int grade;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
 
     public String getFirstName() {
         return firstName;
